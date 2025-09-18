@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Bang Saen - Contact & Travel Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, var(--primary-color), #98FB98);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bang Saen <span class="highlight">Tourism</span></h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="attractions.html" class="nav-link">Attractions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Visit</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="hero" style="min-height: 60vh; padding-top: 120px;">
+        <div class="hero-content">
+            <h1>Plan Your <span class="highlight">Visit</span></h1>
+            <p class="hero-subtitle">Everything you need to know for an amazing Bang Saen experience</p>
+        </div>
+        <div class="hero-image">
+            <div class="placeholder-image hero-placeholder">
+                <i class="fas fa-suitcase-rolling"></i>
+                <p>Your Bang Saen Adventure Awaits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Information -->
+    <section style="padding: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Getting to Bang Saen</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- By Car -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #FF6B6B, #FFE66D);">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Car</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Drive from Bangkok via Highway 7 (Motorway) to Chonburi, then follow signs to Bang Saen Beach.
+                    </p>
+                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
+                        <p style="font-weight: 500; color: var(--primary-color);">Distance: ~100 km from Bangkok</p>
+                        <p style="font-weight: 500; color: var(--primary-color);">Duration: 1.5-2 hours</p>
+                    </div>
+                </div>
+
+                <!-- By Bus -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Bus</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Take a bus from Bangkok's Eastern Bus Terminal (Ekkamai) to Chonburi, then local transport to Bang Saen.
+                    </p>
+                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
+                        <p style="font-weight: 500; color: var(--primary-color);">Frequency: Every 30 minutes</p>
+                        <p style="font-weight: 500; color: var(--primary-color);">Cost: ~100-150 THB</p>
+                    </div>
+                </div>
+
+                <!-- By Train + Bus -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Train</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Take the train from Bangkok to Chonburi Railway Station, then take a songthaew to Bang Saen Beach.
+                    </p>
+                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
+                        <p style="font-weight: 500; color: var(--primary-color);">Duration: 2-3 hours total</p>
+                        <p style="font-weight: 500; color: var(--primary-color);">Budget-friendly option</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation -->
+    <section style="padding: 80px 0; background: var(--white);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Where to Stay</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Beach Resorts -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #2E8B57, #98FB98);">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Beachfront Resorts</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Luxury accommodations with direct beach access, pools, and full amenities.
+                    </p>
+                    <p style="font-weight: 500; color: var(--primary-color);">2,000-5,000 THB/night</p>
+                </div>
+
+                <!-- Budget Hotels -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Budget Hotels</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Clean, comfortable accommodations within walking distance of the beach.
+                    </p>
+                    <p style="font-weight: 500; color: var(--primary-color);">800-2,000 THB/night</p>
+                </div>
+
+                <!-- Guesthouses -->
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Local Guesthouses</h3>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
+                        Family-run accommodations offering authentic local experiences.
+                    </p>
+                    <p style="font-weight: 500; color: var(--primary-color);">500-1,200 THB/night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Information -->
+    <section style="padding: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Practical Information</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-money-bill-wave"></i> Currency</h3>
+                    <p style="color: var(--text-light);">Thai Baht (THB)</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">ATMs available throughout Bang Saen</p>
+                </div>
+
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-language"></i> Language</h3>
+                    <p style="color: var(--text-light);">Thai (primary)</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">English widely understood in tourist areas</p>
+                </div>
+
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-wifi"></i> Internet</h3>
+                    <p style="color: var(--text-light);">Free WiFi in most hotels</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Good mobile coverage throughout the area</p>
+                </div>
+
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-clock"></i> Time Zone</h3>
+                    <p style="color: var(--text-light);">UTC+7 (ICT)</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Same as Bangkok time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section style="padding: 80px 0; background: var(--white);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                <!-- Contact Information -->
+                <div>
+                    <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">Get in Touch</h2>
+                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 2rem;">
+                        Have questions about Bang Saen or want to share your own story? We'd love to hear from you! Our team of students from NUS College and Burapha University is here to help.
+                    </p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Contact Information</h3>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
+                            <span style="color: var(--text-light);">bangsaen.tourism@example.com</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-phone" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
+                            <span style="color: var(--text-light);">+66 38 xxx-xxxx</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
+                            <span style="color: var(--text-light);">Bang Saen, Chonburi, Thailand</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Follow Our Journey</h3>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; background: var(--accent-color); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; background: var(--secondary-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <form class="contact-form" id="contact-form">
+                        <h3 style="color: var(--text-dark); margin-bottom: 1.5rem;">Send us a Message</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="university">University</label>
+                                <select id="university" name="university">
+                                    <option value="">Select your university</option>
+                                    <option value="nus">NUS College</option>
+                                    <option value="burapha">Burapha University</option>
+                                    <option value="other">Other</option>
+                                    <option value="visitor">Visitor/Tourist</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a topic</option>
+                                    <option value="story">Share a Story</option>
+                                    <option value="travel">Travel Information</option>
+                                    <option value="collaboration">Partnership/Collaboration</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your Bang Saen experience, ask questions, or share your ideas..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Information -->
+    <section style="padding: 60px 0; background: var(--light-gray);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; color: var(--text-dark); margin-bottom: 2rem;">Emergency Contacts</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
+                    <i class="fas fa-phone-alt" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <p style="font-weight: 500; color: var(--text-dark);">Emergency</p>
+                    <p style="color: var(--text-light);">191</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
+                    <i class="fas fa-ambulance" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <p style="font-weight: 500; color: var(--text-dark);">Medical Emergency</p>
+                    <p style="color: var(--text-light);">1669</p>
+                </div>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
+                    <i class="fas fa-info-circle" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <p style="font-weight: 500; color: var(--text-dark);">Tourist Police</p>
+                    <p style="color: var(--text-light);">1155</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bang Saen Tourism</h3>
+                    <p>A collaborative project between NUS College and Burapha University</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Visit Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bang Saen Tourism Project. NUS College & Burapha University Partnership.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

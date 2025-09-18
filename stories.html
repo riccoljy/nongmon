@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Bang Saen Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for stories page */
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .modal-image-placeholder {
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary-color), var(--light-blue));
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .modal-image-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bang Saen <span class="highlight">Tourism</span></h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="attractions.html" class="nav-link">Attractions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Visit</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Stories Header -->
+    <section class="hero" style="min-height: 60vh; padding-top: 120px;">
+        <div class="hero-content">
+            <h1>Student <span class="highlight">Stories</span></h1>
+            <p class="hero-subtitle">Discover Bang Saen through the eyes of NUS College and Burapha University students</p>
+        </div>
+        <div class="hero-image">
+            <div class="placeholder-image hero-placeholder">
+                <i class="fas fa-book-open"></i>
+                <p>Stories from Bang Saen</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section style="padding: 40px 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="culture">Culture</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="adventure">Adventure</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Grid -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="story-grid">
+                <!-- Story 1 -->
+                <div class="story-card" data-category="culture">
+                    <div class="story-image">
+                        <i class="fas fa-temple-buddhist"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Temple Traditions at Dawn</h3>
+                        <p class="story-author">By Sarah Chen - NUS College</p>
+                        <p class="story-excerpt">Witnessing the morning prayers at Wat Saensuk was a spiritual awakening. The golden light filtering through ancient architecture created a moment of pure tranquility that I'll never forget.</p>
+                        <div class="story-tags">
+                            <span class="tag">Culture</span>
+                            <span class="tag">Spirituality</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card" data-category="food">
+                    <div class="story-image">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Fresh Catch at Bang Saen Market</h3>
+                        <p class="story-author">By Somchai Pattana - Burapha University</p>
+                        <p class="story-excerpt">The early morning fish market is where Bang Saen's heart beats strongest. Local fishermen bring in their daily catch, and the aroma of grilled seafood fills the air with promises of incredible flavors.</p>
+                        <div class="story-tags">
+                            <span class="tag">Food</span>
+                            <span class="tag">Local Life</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="story-card" data-category="nature">
+                    <div class="story-image">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Sunrise Over the Gulf</h3>
+                        <p class="story-author">By Maria Rodriguez - NUS College</p>
+                        <p class="story-excerpt">There's something magical about watching the sun rise over the Gulf of Thailand. The sky transforms into a canvas of oranges and pinks, reflected perfectly in the calm waters of Bang Saen beach.</p>
+                        <div class="story-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 4 -->
+                <div class="story-card" data-category="adventure">
+                    <div class="story-image">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Cycling Through Coastal Villages</h3>
+                        <p class="story-author">By James Wilson - NUS College</p>
+                        <p class="story-excerpt">Renting a bicycle and exploring the small villages around Bang Saen revealed hidden gems. From family-run coconut farms to quiet beaches known only to locals, every turn was an adventure.</p>
+                        <div class="story-tags">
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Exploration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 5 -->
+                <div class="story-card" data-category="culture">
+                    <div class="story-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Traditional Music by the Sea</h3>
+                        <p class="story-author">By Niran Thanakit - Burapha University</p>
+                        <p class="story-excerpt">Every evening, local musicians gather at the beachfront to play traditional Thai music. The melodies blend with the sound of waves, creating an unforgettable cultural experience for visitors.</p>
+                        <div class="story-tags">
+                            <span class="tag">Culture</span>
+                            <span class="tag">Music</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 6 -->
+                <div class="story-card" data-category="food">
+                    <div class="story-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Coconut Ice Cream Dreams</h3>
+                        <p class="story-author">By Lisa Park - NUS College</p>
+                        <p class="story-excerpt">Nothing beats the heat like fresh coconut ice cream served right from the shell. The vendor's cart has become my daily stop, and each scoop tastes like tropical paradise.</p>
+                        <div class="story-tags">
+                            <span class="tag">Food</span>
+                            <span class="tag">Street Food</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 7 -->
+                <div class="story-card" data-category="nature">
+                    <div class="story-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Mangrove Forest Discovery</h3>
+                        <p class="story-author">By Achara Somboon - Burapha University</p>
+                        <p class="story-excerpt">The mangrove forests near Bang Saen are a hidden ecosystem teeming with life. Paddling through the quiet waterways, I discovered crabs, birds, and plants that exist nowhere else.</p>
+                        <div class="story-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Ecosystem</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 8 -->
+                <div class="story-card" data-category="adventure">
+                    <div class="story-image">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Fishing Boat Adventure</h3>
+                        <p class="story-author">By Michael Chen - NUS College</p>
+                        <p class="story-excerpt">Joining local fishermen on their daily journey was eye-opening. Learning traditional fishing techniques while surrounded by the endless blue of the Gulf created memories I'll treasure forever.</p>
+                        <div class="story-tags">
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Fishing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 9 -->
+                <div class="story-card" data-category="culture">
+                    <div class="story-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">Local Art and Crafts</h3>
+                        <p class="story-author">By Pranee Wiset - Burapha University</p>
+                        <p class="story-excerpt">The local artisans of Bang Saen create beautiful handicrafts using materials from the sea. Learning to weave with dried seagrass connected me to generations of coastal traditions.</p>
+                        <div class="story-tags">
+                            <span class="tag">Culture</span>
+                            <span class="tag">Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Share Your Bang Saen Story</h2>
+            <p>Have you visited Bang Saen? We'd love to hear about your experience!</p>
+            <a href="contact.html" class="btn btn-primary">Submit Your Story</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bang Saen Tourism</h3>
+                    <p>A collaborative project between NUS College and Burapha University</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Visit Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bang Saen Tourism Project. NUS College & Burapha University Partnership.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
