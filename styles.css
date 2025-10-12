@@ -96,22 +96,23 @@ body {
 }
 
 .nav-button {
-    background: linear-gradient(135deg, #28a745, #20c997);
+    background: linear-gradient(135deg, #28a745, #34ce57);
     color: white !important;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     margin-left: 1rem;
     display: inline-block;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
 }
 
 .nav-button:hover {
-    background: linear-gradient(135deg, #218838, #1ea085);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
 }
 
 .hamburger {
