@@ -78,7 +78,7 @@ nong-mon-market/
 ├── about.html         # About us/partnership
 ├── contact.html       # Contact & visit info
 ├── styles.css         # Main stylesheet
-├── script.js          # JavaScript functionality & shared components
+├── script.js          # JavaScript functionality
 └── README.md          # This file
 ```
 
@@ -102,13 +102,12 @@ nong-mon-market/
 - Lightweight external dependencies
 - Smooth animations with CSS transforms
 
-### Component Architecture
-- **Shared Components**: Header and footer are defined as JavaScript template literals in `script.js`
-- **Dynamic Loading**: Components are injected into placeholder divs on page load
-- **Active Navigation**: Current page is automatically highlighted in navigation
-- **DRY Principle**: No code duplication across HTML files
-- **Local File Compatible**: Works without a web server (no CORS issues)
-- **Single Source**: All navigation and footer content maintained in one place
+### Architecture
+- **Traditional HTML Structure**: Each page contains its own header and footer HTML
+- **Consistent Navigation**: All pages have identical navigation and footer sections
+- **Mobile Responsive**: Hamburger menu functionality works across all pages
+- **Simple Maintenance**: Direct HTML editing in each file
+- **No Dependencies**: No component loading or JavaScript templating required
 
 ## 📱 Mobile Responsiveness
 
