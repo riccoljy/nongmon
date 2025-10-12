@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Story filtering functionality (for stories page)
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const storyCards = document.querySelectorAll('.story-card');
+    const allStoryCards = document.querySelectorAll('.story-card');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const filter = this.getAttribute('data-filter');
 
-            storyCards.forEach(card => {
+            allStoryCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
                     card.style.animation = 'fadeInUp 0.5s ease forwards';
@@ -76,37 +76,113 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Image modal functionality (for stories page)
-    const storyImages = document.querySelectorAll('.story-image');
-    storyImages.forEach(image => {
-        image.addEventListener('click', function() {
-            // Create modal overlay
+    // Instagram video modal functionality (for stories page)
+    const storyCards = document.querySelectorAll('.story-card[data-instagram]');
+    
+    // Instagram video data - in a real implementation, these would be actual Instagram embed codes
+    const instagramVideos = {
+        'dawn-market': {
+            username: 'sarah_nus',
+            caption: 'Early morning at Nong Mon Market is pure magic! The vendors setting up their fresh seafood and the aroma of traditional desserts... #NongMonMarket #BangSaen #MarketLife',
+            videoPlaceholder: 'Dawn Market Experience'
+        },
+        'seafood-vendors': {
+            username: 'somchai_burapha',
+            caption: 'Learning about traditional seafood preparation from the masters at Nong Mon Market. Their pride in quality is inspiring! #TraditionalMethods #SeafoodVendors #ThaiCulture',
+            videoPlaceholder: 'Seafood Vendors Story'
+        },
+        'market-colors': {
+            username: 'maria_nus',
+            caption: 'The vibrant colors of Nong Mon Market are a photographer\'s dream! Every corner tells a story of Thai coastal culture. #MarketPhotography #Colors #Culture',
+            videoPlaceholder: 'Market Colors'
+        },
+        'market-hunt': {
+            username: 'james_nus',
+            caption: 'Treasure hunting at Nong Mon Market! Found the most amazing Kanom Chak vendor after exploring every section. #MarketHunt #KanomChak #Discovery',
+            videoPlaceholder: 'Market Treasure Hunt'
+        },
+        'market-sounds': {
+            username: 'niran_burapha',
+            caption: 'The symphony of Nong Mon Market - vendors calling, food sizzling, friendly chatter. This is authentic Thailand! #MarketSounds #Atmosphere #Authentic',
+            videoPlaceholder: 'Market Sounds'
+        },
+        'sweet-discoveries': {
+            username: 'lisa_nus',
+            caption: 'First time trying Khao Lam at Nong Mon Market! Made by a grandmother who\'s been perfecting it for 40 years. Pure tradition in every bite! #KhaoLam #TraditionalSweets #Tradition',
+            videoPlaceholder: 'Sweet Discoveries'
+        },
+        'spice-corner': {
+            username: 'achara_burapha',
+            caption: 'The spice section at Nong Mon Market is a sensory journey! Learning about different shrimp pastes and fish sauces from expert vendors. #Spices #ThaiCuisine #Learning',
+            videoPlaceholder: 'Spice Corner Experience'
+        },
+        'learning-masters': {
+            username: 'michael_nus',
+            caption: 'Watching the dried seafood masters at work is like witnessing culinary artistry! Their expertise in selecting and preparing squid is incredible. #Craftsmanship #DriedSeafood #Masters',
+            videoPlaceholder: 'Learning from Masters'
+        },
+        'market-friendships': {
+            username: 'pranee_burapha',
+            caption: 'The friendships I\'ve made at Nong Mon Market are priceless! Vendors sharing recipes and stories, making me feel part of the community. #Friendship #Community #MarketFamily',
+            videoPlaceholder: 'Market Friendships'
+        }
+    };
+
+    storyCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const instagramId = this.getAttribute('data-instagram');
+            const videoData = instagramVideos[instagramId];
+            
+            if (!videoData) return;
+
+            // Create Instagram-style modal
             const modal = document.createElement('div');
-            modal.className = 'image-modal';
+            modal.className = 'instagram-modal';
             modal.innerHTML = `
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <div class="modal-image-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Full Size Image</p>
+                <div class="instagram-video-container">
+                    <span class="close-instagram">&times;</span>
+                    <div class="instagram-header">
+                        <div class="instagram-avatar">${videoData.username.charAt(0).toUpperCase()}</div>
+                        <div class="instagram-username">${videoData.username}</div>
+                    </div>
+                    <div class="instagram-video-placeholder" style="height: 400px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center; padding: 20px;">
+                        <div>
+                            <i class="fas fa-play-circle" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                            <p>${videoData.videoPlaceholder}</p>
+                            <small style="opacity: 0.8; font-size: 0.9rem;">Instagram Video Post</small>
+                        </div>
+                    </div>
+                    <div class="instagram-caption">
+                        <strong>${videoData.username}</strong> ${videoData.caption}
                     </div>
                 </div>
             `;
             
             document.body.appendChild(modal);
             document.body.style.overflow = 'hidden';
+            
+            // Trigger animation
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
 
             // Close modal functionality
-            const closeModal = modal.querySelector('.close-modal');
+            const closeModal = modal.querySelector('.close-instagram');
             closeModal.addEventListener('click', function() {
-                document.body.removeChild(modal);
-                document.body.style.overflow = 'auto';
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    document.body.removeChild(modal);
+                    document.body.style.overflow = 'auto';
+                }, 300);
             });
 
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
-                    document.body.removeChild(modal);
-                    document.body.style.overflow = 'auto';
+                    modal.classList.remove('active');
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                        document.body.style.overflow = 'auto';
+                    }, 300);
                 }
             });
         });
