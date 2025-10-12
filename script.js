@@ -1,5 +1,143 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
+// Fallback: Embedded components for reliability
+const HEADER_HTML = `
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>Nong Mon <span class="highlight">Market</span></h2>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html" class="nav-link" data-page="home">Home</a>
+            <a href="stories.html" class="nav-link" data-page="stories">Stories</a>
+            <a href="attractions.html" class="nav-link" data-page="attractions">Market Guide</a>
+            <a href="about.html" class="nav-link" data-page="about">About Us</a>
+            <a href="contact.html" class="nav-link" data-page="contact">Visit</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg5BwxwdcUGcf-VBDjktfQn48yIdKupxcBnV3Y3SOgDjS7HQ/viewform" class="nav-button" target="_blank">Submit Story</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+`;
+
+const FOOTER_HTML = `
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nong Mon Market</h3>
+                <p>A collaborative project between NUS College and Burapha University</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="attractions.html">Market Guide</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Visit Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nong Mon Market Project. NUS College & Burapha University Partnership.</p>
+        </div>
+    </div>
+</footer>
+`;
+
+// Try to load external file, fallback to embedded HTML
+function loadHTMLFile(filePath, fallbackHTML) {
+    return new Promise((resolve) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', filePath, true);
+        xhr.timeout = 2000; // 2 second timeout
+        
+        xhr.onload = function() {
+            if (xhr.status === 200 || xhr.status === 0) {
+                resolve(xhr.responseText);
+            } else {
+                console.warn(`Failed to load ${filePath}, using fallback`);
+                resolve(fallbackHTML);
+            }
+        };
+        
+        xhr.onerror = function() {
+            console.warn(`Error loading ${filePath}, using fallback`);
+            resolve(fallbackHTML);
+        };
+        
+        xhr.ontimeout = function() {
+            console.warn(`Timeout loading ${filePath}, using fallback`);
+            resolve(fallbackHTML);
+        };
+        
+        xhr.send();
+    });
+}
+
+// Load shared components with fallback
+async function loadComponents() {
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    
+    try {
+        // Load header (try external file first, fallback to embedded)
+        if (headerPlaceholder) {
+            const headerHTML = await loadHTMLFile('header.html', HEADER_HTML);
+            headerPlaceholder.innerHTML = headerHTML;
+        }
+        
+        // Load footer (try external file first, fallback to embedded)
+        if (footerPlaceholder) {
+            const footerHTML = await loadHTMLFile('footer.html', FOOTER_HTML);
+            footerPlaceholder.innerHTML = footerHTML;
+        }
+        
+        // Set active navigation link after components are loaded
+        setActiveNavLink();
+        
+        // Initialize mobile navigation after header is loaded
+        initializeMobileNav();
+        
+    } catch (error) {
+        console.error('Error loading components:', error);
+        // Final fallback - use embedded HTML directly
+        if (headerPlaceholder) headerPlaceholder.innerHTML = HEADER_HTML;
+        if (footerPlaceholder) footerPlaceholder.innerHTML = FOOTER_HTML;
+        setActiveNavLink();
+        initializeMobileNav();
+    }
+}
+
+// Set active navigation link based on current page
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    const navLinks = document.querySelectorAll('.nav-link[data-page]');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        if ((currentPage === 'index' && linkPage === 'home') || 
+            (currentPage === linkPage)) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Initialize mobile navigation (called after header is loaded)
+function initializeMobileNav() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
@@ -17,6 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+}
+
+// Main initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Load header and footer components (this will also initialize nav and set active links)
+    loadComponents();
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

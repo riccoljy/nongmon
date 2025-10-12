@@ -77,6 +77,8 @@ nong-mon-market/
 ├── attractions.html    # Market guide
 ├── about.html         # About us/partnership
 ├── contact.html       # Contact & visit info
+├── header.html        # Shared navigation component
+├── footer.html        # Shared footer component
 ├── styles.css         # Main stylesheet
 ├── script.js          # JavaScript functionality
 └── README.md          # This file
@@ -101,6 +103,14 @@ nong-mon-market/
 - Efficient JavaScript with event delegation
 - Lightweight external dependencies
 - Smooth animations with CSS transforms
+
+### Component Architecture
+- **Shared Components**: Header and footer are maintained in separate `header.html` and `footer.html` files
+- **Dynamic Loading**: Components are loaded via XMLHttpRequest and injected into placeholder divs
+- **Active Navigation**: Current page is automatically highlighted in navigation
+- **DRY Principle**: No code duplication across HTML files
+- **Local File Compatible**: Uses XMLHttpRequest instead of fetch for local file compatibility
+- **Easy Maintenance**: Update navigation or footer in one file, changes reflect everywhere
 
 ## 📱 Mobile Responsiveness
 

@@ -74,7 +74,8 @@ body {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary-color);
 }
 
@@ -89,8 +90,28 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
+}
+
+.nav-button {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+.nav-button:hover {
+    background: linear-gradient(135deg, #218838, #1ea085);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
 .hamburger {
@@ -466,6 +487,15 @@ body {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-button {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero {
