@@ -1,4 +1,4 @@
-// Fallback: Embedded components for reliability
+// Shared header and footer components
 const HEADER_HTML = `
 <!-- Navigation -->
 <nav class="navbar">
@@ -58,68 +58,26 @@ const FOOTER_HTML = `
 </footer>
 `;
 
-// Try to load external file, fallback to embedded HTML
-function loadHTMLFile(filePath, fallbackHTML) {
-    return new Promise((resolve) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', filePath, true);
-        xhr.timeout = 2000; // 2 second timeout
-        
-        xhr.onload = function() {
-            if (xhr.status === 200 || xhr.status === 0) {
-                resolve(xhr.responseText);
-            } else {
-                console.warn(`Failed to load ${filePath}, using fallback`);
-                resolve(fallbackHTML);
-            }
-        };
-        
-        xhr.onerror = function() {
-            console.warn(`Error loading ${filePath}, using fallback`);
-            resolve(fallbackHTML);
-        };
-        
-        xhr.ontimeout = function() {
-            console.warn(`Timeout loading ${filePath}, using fallback`);
-            resolve(fallbackHTML);
-        };
-        
-        xhr.send();
-    });
-}
-
-// Load shared components with fallback
-async function loadComponents() {
+// Load shared components
+function loadComponents() {
     const headerPlaceholder = document.getElementById('header-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
     
-    try {
-        // Load header (try external file first, fallback to embedded)
-        if (headerPlaceholder) {
-            const headerHTML = await loadHTMLFile('header.html', HEADER_HTML);
-            headerPlaceholder.innerHTML = headerHTML;
-        }
-        
-        // Load footer (try external file first, fallback to embedded)
-        if (footerPlaceholder) {
-            const footerHTML = await loadHTMLFile('footer.html', FOOTER_HTML);
-            footerPlaceholder.innerHTML = footerHTML;
-        }
-        
-        // Set active navigation link after components are loaded
-        setActiveNavLink();
-        
-        // Initialize mobile navigation after header is loaded
-        initializeMobileNav();
-        
-    } catch (error) {
-        console.error('Error loading components:', error);
-        // Final fallback - use embedded HTML directly
-        if (headerPlaceholder) headerPlaceholder.innerHTML = HEADER_HTML;
-        if (footerPlaceholder) footerPlaceholder.innerHTML = FOOTER_HTML;
-        setActiveNavLink();
-        initializeMobileNav();
+    // Insert header
+    if (headerPlaceholder) {
+        headerPlaceholder.innerHTML = HEADER_HTML;
     }
+    
+    // Insert footer
+    if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = FOOTER_HTML;
+    }
+    
+    // Set active navigation link after components are loaded
+    setActiveNavLink();
+    
+    // Initialize mobile navigation after header is loaded
+    initializeMobileNav();
 }
 
 // Set active navigation link based on current page
@@ -159,7 +117,7 @@ function initializeMobileNav() {
 
 // Main initialization
 document.addEventListener('DOMContentLoaded', function() {
-    // Load header and footer components (this will also initialize nav and set active links)
+    // Load header and footer components
     loadComponents();
 
     // Smooth scrolling for anchor links
