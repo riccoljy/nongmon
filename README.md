@@ -1,10 +1,10 @@
-# Bang Saen Tourism Website
+# Nong Mon Market Website
 
-A collaborative website project between NUS College and Burapha University to promote tourism in Bang Saen, Thailand.
+A collaborative website project between NUS College and Burapha University to showcase the culinary heritage and cultural significance of Nong Mon Market in Bang Saen, Thailand.
 
 ## 🌊 Project Overview
 
-This website showcases the beauty and cultural richness of Bang Saen through authentic student stories, comprehensive attraction guides, and practical travel information. It represents a bridge between Singapore and Thailand, connecting international perspectives with local expertise.
+This website showcases the culinary heritage and cultural richness of Nong Mon Market through authentic student stories, comprehensive market guides, and practical visiting information. It represents a bridge between Singapore and Thailand, connecting international food perspectives with local market expertise.
 
 ## 🎯 Features
 
@@ -16,30 +16,30 @@ This website showcases the beauty and cultural richness of Bang Saen through aut
 ### 🏠 Homepage (`index.html`)
 - Engaging hero section with call-to-action buttons
 - Partnership showcase between NUS College and Burapha University
-- Quick preview of Bang Saen's highlights
+- Quick preview of Nong Mon Market's specialties
 - Modern navigation with mobile hamburger menu
 
 ### 📖 Stories Page (`stories.html`)
 - Interactive story dashboard with filtering by categories
-- Student stories from both universities
+- Student market experiences from both universities
 - Clickable image modals for enhanced viewing
 - Tags and author information for each story
 
-### 🏖️ Attractions Page (`attractions.html`)
-- Comprehensive guide to Bang Saen's top attractions
-- Detailed information about beaches, temples, and local sites
-- Activity recommendations and best times to visit
+### 🛒 Market Guide Page (`attractions.html`)
+- Comprehensive guide to Nong Mon Market's sections and specialties
+- Detailed information about seafood, desserts, and local vendors
+- Market activity recommendations and best times to visit
 - Beautiful card layouts with gradient backgrounds
 
 ### 👥 About Us Page (`about.html`)
 - Detailed partnership information
-- Mission statement and project goals
+- Mission statement and market-focused project goals
 - Team introductions and impact statistics
-- Future vision for the collaboration
+- Future vision for culinary cultural collaboration
 
 ### 📞 Contact/Visit Page (`contact.html`)
-- Complete travel information (transportation, accommodation)
-- Practical visitor information (currency, language, etc.)
+- Complete travel information to reach Nong Mon Market
+- Practical visitor information (market hours, parking, etc.)
 - Interactive contact form with validation
 - Emergency contact information
 - Social media integration
@@ -71,12 +71,12 @@ This website showcases the beauty and cultural richness of Bang Saen through aut
 
 ### File Structure
 ```
-bang-saen-tourism/
+nong-mon-market/
 ├── index.html          # Homepage
 ├── stories.html        # Stories dashboard
-├── attractions.html    # Attractions guide
+├── attractions.html    # Market guide
 ├── about.html         # About us/partnership
-├── contact.html       # Contact & travel info
+├── contact.html       # Contact & visit info
 ├── styles.css         # Main stylesheet
 ├── script.js          # JavaScript functionality
 └── README.md          # This file
@@ -131,30 +131,30 @@ The website is fully responsive with:
 ## 🌟 Content Highlights
 
 ### Student Stories
-- Authentic experiences from both NUS College and Burapha University students
-- Diverse perspectives covering culture, food, nature, and adventure
+- Authentic market experiences from both NUS College and Burapha University students
+- Diverse perspectives covering market culture, food specialties, vendors, and discoveries
 - Tagged and categorized for easy browsing
 
-### Attraction Information
-- Comprehensive coverage of Bang Saen's top destinations
-- Practical information including location and activity details
-- Best times to visit and travel recommendations
+### Market Information
+- Comprehensive coverage of Nong Mon Market's sections and specialties
+- Practical information including vendor details and product information
+- Best times to visit and market recommendations
 
 ### Partnership Focus
 - Celebrates the collaboration between Singapore and Thailand
-- Highlights the unique value of cross-cultural perspectives
-- Emphasizes sustainable and responsible tourism
+- Highlights the unique value of cross-cultural food perspectives
+- Emphasizes sustainable and responsible market tourism
 
 ## 🔮 Future Enhancements
 
 Potential improvements for the website:
-- **Image Gallery**: Replace placeholder images with actual photos
-- **Blog System**: Add a dynamic blog for ongoing stories
+- **Image Gallery**: Replace placeholder images with actual market photos
+- **Blog System**: Add a dynamic blog for ongoing market stories
 - **Multi-language Support**: Thai and English versions
-- **Interactive Map**: Embedded Google Maps with attraction markers
-- **Booking Integration**: Links to accommodation and activity bookings
+- **Interactive Map**: Embedded Google Maps with market section markers
+- **Vendor Directory**: Detailed profiles of market vendors and their specialties
 - **Social Media Feed**: Live integration with Instagram/Facebook
-- **Student Submission Portal**: Allow students to submit stories directly
+- **Student Submission Portal**: Allow students to submit market stories directly
 
 ## 🤝 Contributing
 
@@ -168,4 +168,4 @@ This project is created for educational purposes as part of a university collabo
 
 ---
 
-**Visit Bang Saen - Where Singapore meets Thailand in perfect harmony! 🇸🇬🤝🇹🇭**
+**Visit Nong Mon Market - Where Singapore meets Thailand through culinary heritage! 🇸🇬🤝🇹🇭**
