@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Nong Mon Market - NUS & Burapha Partnership</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,17 +32,28 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-float"></div>
+        <div class="hero-float"></div>
+        <div class="hero-float"></div>
         <div class="hero-content">
             <h1>Experience the Flavors of <span class="highlight">Nong Mon Market</span></h1>
             <p class="hero-subtitle">Discover Thailand's premier seafood and delicacy market through the eyes of NUS College and Burapha University students</p>
             <div class="hero-buttons">
                 <a href="stories.html" class="btn btn-primary">Explore Stories</a>
+                <a href="contact.html" class="btn btn-secondary">Plan Your Visit</a>
             </div>
         </div>
         <div class="hero-image">
-            <div class="placeholder-image hero-placeholder">
-                <i class="fas fa-shopping-basket"></i>
-                <p>Vibrant Nong Mon Market</p>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="hero-visual-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="hero-visual-text">Vibrant Nong Mon Market</div>
+                    <div class="hero-visual-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -50,11 +61,14 @@
     <!-- Partnership Section -->
     <section class="partnership">
         <div class="container">
-            <h2>A Collaborative Journey</h2>
-            <p class="section-subtitle">NUS College & Burapha University unite to showcase Nong Mon Market's culinary heritage</p>
+            <div class="section-header">
+                <span class="section-label">Our Partnership</span>
+                <h2>A Collaborative Journey</h2>
+                <p class="section-subtitle">NUS College & Burapha University unite to showcase Nong Mon Market's culinary heritage</p>
+            </div>
             <div class="partnership-grid">
                 <div class="partnership-card">
-                    <div class="university-logo">
+                    <div class="university-logo" style="background: linear-gradient(135deg, #003d7a, #0066cc);">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>NUS College</h3>
@@ -64,7 +78,7 @@
                     <i class="fas fa-handshake"></i>
                 </div>
                 <div class="partnership-card">
-                    <div class="university-logo">
+                    <div class="university-logo" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
                         <i class="fas fa-university"></i>
                     </div>
                     <h3>Burapha University</h3>
@@ -77,24 +91,27 @@
     <!-- Quick Preview -->
     <section class="preview">
         <div class="container">
-            <h2>What Makes Nong Mon Market Special</h2>
-            <div class="preview-grid">
+            <div class="section-header">
+                <span class="section-label">Discover</span>
+                <h2>What Makes Nong Mon Market Special</h2>
+            </div>
+            <div class="preview-grid stagger-children">
                 <div class="preview-card">
-                    <div class="placeholder-image">
+                    <div class="preview-icon" style="background: linear-gradient(135deg, var(--coral), var(--coral-soft));">
                         <i class="fas fa-fish"></i>
                     </div>
                     <h3>Fresh Seafood</h3>
                     <p>Daily catch from local fishermen including dried squid, shrimp, and razor clams</p>
                 </div>
                 <div class="preview-card">
-                    <div class="placeholder-image">
+                    <div class="preview-icon" style="background: linear-gradient(135deg, var(--gold), #e8b84e);">
                         <i class="fas fa-cookie-bite"></i>
                     </div>
                     <h3>Traditional Desserts</h3>
                     <p>Famous Kanom Chak and Khao Lam - authentic Thai sweets that represent regional heritage</p>
                 </div>
                 <div class="preview-card">
-                    <div class="placeholder-image">
+                    <div class="preview-icon" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
                         <i class="fas fa-store"></i>
                     </div>
                     <h3>Market Culture</h3>

@@ -5,58 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories - Nong Mon Market</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .ig-card {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .ig-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
-        }
-
-        /* Override Instagram embed's own styling */
-        .ig-card .instagram-media {
-            margin: 0 !important;
-            min-width: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            border: none !important;
-            box-shadow: none !important;
-            border-radius: 0 !important;
-        }
-
-        .ig-card iframe {
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            border: none !important;
-        }
-
-        @media (max-width: 1024px) {
-            .instagram-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .instagram-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -82,6 +32,8 @@
 
     <!-- Stories Header -->
     <section class="hero" style="min-height: 60vh; padding-top: 120px;">
+        <div class="hero-float"></div>
+        <div class="hero-float"></div>
         <div class="hero-content">
             <h1>Market <span class="highlight">Stories</span></h1>
             <p class="hero-subtitle">Discover Nong Mon Market through the eyes of NUS College and Burapha University students</p>
@@ -89,7 +41,7 @@
     </section>
 
     <!-- Instagram Posts Grid -->
-    <section style="padding: 60px 0; background: var(--light-gray);">
+    <section style="padding: 80px 0; background: var(--cream);">
         <div class="container">
             <div class="instagram-grid">
 
@@ -134,7 +86,7 @@
         <div class="container">
             <h2>Share Your Nong Mon Market Story</h2>
             <p>Have you visited Nong Mon Market? We'd love to hear about your experience!</p>
-            <a href="contact.html" class="btn btn-primary">Submit Your Story</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg5BwxwdcUGcf-VBDjktfQn48yIdKupxcBnV3Y3SOgDjS7HQ/viewform" class="btn btn-primary" target="_blank">Submit Your Story</a>
         </div>
     </section>
 

@@ -5,99 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Nong Mon Market - Contact & Travel Info</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .contact-form {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid var(--light-gray);
-            border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .success-message {
-            background: linear-gradient(135deg, var(--primary-color), #98FB98);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .info-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -123,36 +32,43 @@
 
     <!-- Contact Header -->
     <section class="hero" style="min-height: 60vh; padding-top: 120px;">
+        <div class="hero-float"></div>
+        <div class="hero-float"></div>
         <div class="hero-content">
             <h1>Plan Your <span class="highlight">Market Visit</span></h1>
             <p class="hero-subtitle">Everything you need to know for an amazing Nong Mon Market experience</p>
         </div>
         <div class="hero-image">
-            <div class="placeholder-image hero-placeholder">
-                <i class="fas fa-shopping-basket"></i>
-                <p>Your Nong Mon Market Adventure Awaits</p>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="hero-visual-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <div class="hero-visual-text">Your Market Adventure Awaits</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Travel Information -->
-    <section style="padding: 80px 0; background: var(--light-gray);">
+    <section class="travel-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Getting to Nong Mon Market</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="section-header">
+                <span class="section-label">Getting There</span>
+                <h2 class="section-title">Getting to Nong Mon Market</h2>
+            </div>
+
+            <div class="info-grid">
                 <!-- By Car -->
                 <div class="info-card">
-                    <div class="info-icon" style="background: linear-gradient(135deg, #FF6B6B, #FFE66D);">
+                    <div class="info-icon" style="background: linear-gradient(135deg, var(--coral), var(--coral-soft));">
                         <i class="fas fa-car"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Car</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Drive from Bangkok via Highway 7 (Motorway) to Chonburi, then take Sukhumvit Road to Nong Mon Market.
-                    </p>
-                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
-                        <p style="font-weight: 500; color: var(--primary-color);">Distance: ~64 miles from Bangkok</p>
-                        <p style="font-weight: 500; color: var(--primary-color);">Duration: 1.5-2 hours</p>
+                    <h3>By Car</h3>
+                    <p>Drive from Bangkok via Highway 7 (Motorway) to Chonburi, then take Sukhumvit Road to Nong Mon Market.</p>
+                    <div class="info-detail">
+                        <p>Distance: ~64 miles from Bangkok</p>
+                        <p>Duration: 1.5-2 hours</p>
                     </div>
                 </div>
 
@@ -161,226 +77,156 @@
                     <div class="info-icon" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">
                         <i class="fas fa-bus"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Bus</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Take a bus from Bangkok's Eastern Bus Terminal (Ekkamai) to Chonburi, then local transport to Nong Mon Market on Sukhumvit Road.
-                    </p>
-                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
-                        <p style="font-weight: 500; color: var(--primary-color);">Frequency: Every 30 minutes</p>
-                        <p style="font-weight: 500; color: var(--primary-color);">Cost: ~100-150 THB</p>
+                    <h3>By Bus</h3>
+                    <p>Take a bus from Bangkok's Eastern Bus Terminal (Ekkamai) to Chonburi, then local transport to Nong Mon Market on Sukhumvit Road.</p>
+                    <div class="info-detail">
+                        <p>Frequency: Every 30 minutes</p>
+                        <p>Cost: ~100-150 THB</p>
                     </div>
                 </div>
 
-                <!-- By Train + Bus -->
+                <!-- By Train -->
                 <div class="info-card">
                     <div class="info-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
                         <i class="fas fa-train"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">By Train</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Take the train from Bangkok to Chonburi Railway Station, then take a songthaew to Nong Mon Market.
-                    </p>
-                    <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px;">
-                        <p style="font-weight: 500; color: var(--primary-color);">Duration: 2-3 hours total</p>
-                        <p style="font-weight: 500; color: var(--primary-color);">Budget-friendly option</p>
+                    <h3>By Train</h3>
+                    <p>Take the train from Bangkok to Chonburi Railway Station, then take a songthaew to Nong Mon Market.</p>
+                    <div class="info-detail">
+                        <p>Duration: 2-3 hours total</p>
+                        <p>Budget-friendly option</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Accommodation -->
-    <section style="padding: 80px 0; background: var(--white);">
+    <!-- Market Hours & Info -->
+    <section class="travel-section" style="background: var(--warm-white);">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Market Hours & Information</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="section-header">
+                <span class="section-label">Plan Ahead</span>
+                <h2 class="section-title">Market Hours & Information</h2>
+            </div>
+
+            <div class="info-grid">
                 <!-- Market Hours -->
                 <div class="info-card">
-                    <div class="info-icon" style="background: linear-gradient(135deg, #2E8B57, #98FB98);">
+                    <div class="info-icon" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Operating Hours</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Open daily from 6:00 AM to 7:00 PM. Best selection available in the morning hours.
-                    </p>
-                    <p style="font-weight: 500; color: var(--primary-color);">Daily: 6:00 AM - 7:00 PM</p>
+                    <h3>Operating Hours</h3>
+                    <p>Open daily from 6:00 AM to 7:00 PM. Best selection available in the morning hours.</p>
+                    <div class="info-detail">
+                        <p>Daily: 6:00 AM - 7:00 PM</p>
+                    </div>
                 </div>
 
-                <!-- Location Info -->
+                <!-- Location -->
                 <div class="info-card">
-                    <div class="info-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+                    <div class="info-icon" style="background: linear-gradient(135deg, var(--gold), #e8b84e);">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Location</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Located on Sukhumvit Road near Bang Saen Beach, easily accessible by car or public transport.
-                    </p>
-                    <p style="font-weight: 500; color: var(--primary-color);">Sukhumvit Road, Chonburi</p>
+                    <h3>Location</h3>
+                    <p>Located on Sukhumvit Road near Bang Saen Beach, easily accessible by car or public transport.</p>
+                    <div class="info-detail">
+                        <p>Sukhumvit Road, Chonburi</p>
+                    </div>
                 </div>
 
-                <!-- Parking Info -->
+                <!-- Parking -->
                 <div class="info-card">
                     <div class="info-icon" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
                         <i class="fas fa-parking"></i>
                     </div>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Parking</h3>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1rem;">
-                        Free parking available near the market. Additional street parking on Sukhumvit Road.
-                    </p>
-                    <p style="font-weight: 500; color: var(--primary-color);">Free parking available</p>
+                    <h3>Parking</h3>
+                    <p>Free parking available near the market. Additional street parking on Sukhumvit Road.</p>
+                    <div class="info-detail">
+                        <p>Free parking available</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Practical Information -->
-    <section style="padding: 80px 0; background: var(--light-gray);">
+    <section class="practical-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Practical Information</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-money-bill-wave"></i> Currency</h3>
-                    <p style="color: var(--text-light);">Thai Baht (THB)</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">ATMs available throughout Bang Saen</p>
+            <div class="section-header">
+                <span class="section-label">Good to Know</span>
+                <h2 class="section-title">Practical Information</h2>
+            </div>
+
+            <div class="practical-grid stagger-children">
+                <div class="practical-card">
+                    <h3><i class="fas fa-money-bill-wave"></i> Currency</h3>
+                    <p>Thai Baht (THB)</p>
+                    <p>ATMs available throughout Bang Saen</p>
                 </div>
 
-                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-language"></i> Language</h3>
-                    <p style="color: var(--text-light);">Thai (primary)</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">English widely understood in tourist areas</p>
+                <div class="practical-card">
+                    <h3><i class="fas fa-language"></i> Language</h3>
+                    <p>Thai (primary)</p>
+                    <p>English widely understood in tourist areas</p>
                 </div>
 
-                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-wifi"></i> Internet</h3>
-                    <p style="color: var(--text-light);">Free WiFi in most hotels</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Good mobile coverage throughout the area</p>
+                <div class="practical-card">
+                    <h3><i class="fas fa-wifi"></i> Internet</h3>
+                    <p>Free WiFi in most hotels</p>
+                    <p>Good mobile coverage throughout the area</p>
                 </div>
 
-                <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;"><i class="fas fa-clock"></i> Time Zone</h3>
-                    <p style="color: var(--text-light);">UTC+7 (ICT)</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Same as Bangkok time</p>
+                <div class="practical-card">
+                    <h3><i class="fas fa-clock"></i> Time Zone</h3>
+                    <p>UTC+7 (ICT)</p>
+                    <p>Same as Bangkok time</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section style="padding: 80px 0; background: var(--white);">
+    <!-- Contact / Get in Touch -->
+    <section class="contact-section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-                <!-- Contact Information -->
-                <div>
-                    <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">Get in Touch</h2>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 2rem;">
-                        Have questions about Nong Mon Market or want to share your own market experience? We'd love to hear from you! Our team of students from NUS College and Burapha University is here to help.
-                    </p>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Contact Information</h3>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
-                            <span style="color: var(--text-light);">nongmonmarket@example.com</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <i class="fas fa-phone" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
-                            <span style="color: var(--text-light);">+66 38 xxx-xxxx</span>
-                        </div>
-                        <div style="display: flex; align-items: center;">
-                            <i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 1rem; width: 20px;"></i>
-                            <span style="color: var(--text-light);">Nong Mon Market, Sukhumvit Road, Chonburi, Thailand</span>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <span class="section-label">Connect With Us</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Have questions about Nong Mon Market or want to share your experience? Reach out to us on Instagram!</p>
+            </div>
 
-                    <div>
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Follow Our Journey</h3>
-                        <div style="display: flex; gap: 1rem;">
-                            <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" style="width: 40px; height: 40px; background: var(--accent-color); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" style="width: 40px; height: 40px; background: var(--secondary-color); color: var(--text-dark); display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: transform 0.3s ease;">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="contact-ig-card">
+                <div class="contact-ig-icon">
+                    <i class="fab fa-instagram"></i>
                 </div>
-
-                <!-- Contact Form -->
-                <div>
-                    <form class="contact-form" id="contact-form">
-                        <h3 style="color: var(--text-dark); margin-bottom: 1.5rem;">Send us a Message</h3>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="university">University</label>
-                                <select id="university" name="university">
-                                    <option value="">Select your university</option>
-                                    <option value="nus">NUS College</option>
-                                    <option value="burapha">Burapha University</option>
-                                    <option value="other">Other</option>
-                                    <option value="visitor">Visitor/Tourist</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject">
-                                    <option value="">Select a topic</option>
-                                    <option value="story">Share a Story</option>
-                                    <option value="travel">Travel Information</option>
-                                    <option value="collaboration">Partnership/Collaboration</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your Nong Mon Market experience, ask questions, or share your ideas..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
+                <h3>@nongmoninmyeyes</h3>
+                <p>Follow our Instagram for the latest stories, market highlights, and updates from the NUS College & Burapha University team.</p>
+                <a href="https://www.instagram.com/nongmoninmyeyes/" class="btn btn-primary" target="_blank">Visit Our Instagram</a>
             </div>
         </div>
     </section>
 
     <!-- Emergency Information -->
-    <section style="padding: 60px 0; background: var(--light-gray);">
+    <section class="emergency-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2rem; color: var(--text-dark); margin-bottom: 2rem;">Emergency Contacts</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
-                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
-                    <i class="fas fa-phone-alt" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                    <p style="font-weight: 500; color: var(--text-dark);">Emergency</p>
-                    <p style="color: var(--text-light);">191</p>
+            <div class="section-header">
+                <span class="section-label">Safety First</span>
+                <h2 class="section-title">Emergency Contacts</h2>
+            </div>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <p class="emergency-label">Emergency</p>
+                    <p class="emergency-number">191</p>
                 </div>
-                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
-                    <i class="fas fa-ambulance" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                    <p style="font-weight: 500; color: var(--text-dark);">Medical Emergency</p>
-                    <p style="color: var(--text-light);">1669</p>
+                <div class="emergency-card">
+                    <i class="fas fa-ambulance"></i>
+                    <p class="emergency-label">Medical Emergency</p>
+                    <p class="emergency-number">1669</p>
                 </div>
-                <div style="background: var(--white); padding: 1.5rem; border-radius: 10px;">
-                    <i class="fas fa-info-circle" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                    <p style="font-weight: 500; color: var(--text-dark);">Tourist Police</p>
-                    <p style="color: var(--text-light);">1155</p>
+                <div class="emergency-card">
+                    <i class="fas fa-info-circle"></i>
+                    <p class="emergency-label">Tourist Police</p>
+                    <p class="emergency-number">1155</p>
                 </div>
             </div>
         </div>

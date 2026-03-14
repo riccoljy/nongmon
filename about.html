@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Nong Mon Market</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -32,38 +32,47 @@
 
     <!-- About Header -->
     <section class="hero" style="min-height: 60vh; padding-top: 120px;">
+        <div class="hero-float"></div>
+        <div class="hero-float"></div>
         <div class="hero-content">
             <h1>About <span class="highlight">Our Mission</span></h1>
             <p class="hero-subtitle">Bridging cultures and promoting sustainable tourism through academic collaboration</p>
         </div>
         <div class="hero-image">
-            <div class="placeholder-image hero-placeholder">
-                <i class="fas fa-handshake"></i>
-                <p>NUS & Burapha Partnership</p>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="hero-visual-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="hero-visual-text">NUS & Burapha Partnership</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Mission Statement -->
-    <section style="padding: 80px 0; background: var(--white);">
+    <section class="mission-section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">Our Mission</h2>
-                <p style="font-size: 1.3rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem;">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p class="lead">
                     To showcase the authentic culinary heritage and cultural richness of Nong Mon Market through the unique perspective of international and local students, fostering cross-cultural understanding and promoting appreciation for traditional Thai market culture.
                 </p>
-                <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.6;">
-                    This project represents more than just market promotion—it's a bridge between Singapore and Thailand, connecting young minds through shared culinary experiences and creating lasting relationships that transcend borders.
+                <p class="body">
+                    This project represents more than just market promotion — it's a bridge between Singapore and Thailand, connecting young minds through shared culinary experiences and creating lasting relationships that transcend borders.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Partnership Details -->
-    <section style="padding: 80px 0; background: var(--light-gray);">
+    <section class="goals-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">The Partnership</h2>
-            
+            <div class="section-header">
+                <span class="section-label">Collaboration</span>
+                <h2 class="section-title">The Partnership</h2>
+            </div>
+
             <div class="partnership-grid" style="margin-bottom: 4rem;">
                 <div class="partnership-card">
                     <div class="university-logo" style="background: linear-gradient(135deg, #003d7a, #0066cc);">
@@ -71,65 +80,47 @@
                     </div>
                     <h3>NUS College</h3>
                     <p><strong>National University of Singapore</strong></p>
-                    <p style="margin-top: 1rem;">Bringing international perspectives, research excellence, and global networking to promote Nong Mon Market as a world-class culinary destination.</p>
-                    <div style="margin-top: 1.5rem;">
-                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Our Contribution:</h4>
-                        <ul style="text-align: left; color: var(--text-light);">
-                            <li>International culinary perspectives</li>
-                            <li>Digital storytelling expertise</li>
-                            <li>Cross-cultural food experiences</li>
-                            <li>Market research methodologies</li>
-                        </ul>
-                    </div>
+                    <p style="margin-top: 0.75rem;">Bringing international perspectives, research excellence, and global networking to promote Nong Mon Market as a world-class culinary destination.</p>
                 </div>
 
                 <div class="partnership-icon">
-                    <i class="fas fa-globe-asia" style="color: var(--accent-color);"></i>
+                    <i class="fas fa-globe-asia" style="color: var(--coral);"></i>
                 </div>
 
                 <div class="partnership-card">
-                    <div class="university-logo" style="background: linear-gradient(135deg, var(--primary-color), #228B22);">
+                    <div class="university-logo" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
                         <i class="fas fa-university"></i>
                     </div>
                     <h3>Burapha University</h3>
                     <p><strong>มหาวิทยาลัยบูรพา</strong></p>
-                    <p style="margin-top: 1rem;">Providing deep local knowledge, cultural insights, and authentic connections to the Nong Mon Market community and its culinary traditions.</p>
-                    <div style="margin-top: 1.5rem;">
-                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Our Contribution:</h4>
-                        <ul style="text-align: left; color: var(--text-light);">
-                            <li>Local market expertise</li>
-                            <li>Vendor relationships</li>
-                            <li>Thai language support</li>
-                            <li>Culinary heritage knowledge</li>
-                        </ul>
-                    </div>
+                    <p style="margin-top: 0.75rem;">Providing deep local knowledge, cultural insights, and authentic connections to the Nong Mon Market community and its culinary traditions.</p>
                 </div>
             </div>
 
             <!-- Project Goals -->
-            <div style="background: var(--white); padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                <h3 style="text-align: center; color: var(--text-dark); margin-bottom: 2rem;">Project Goals</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                            <i class="fas fa-eye" style="color: white; font-size: 1.5rem;"></i>
+            <div class="goals-card">
+                <h3>Project Goals</h3>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <div class="goal-icon" style="background: var(--jungle);">
+                            <i class="fas fa-eye"></i>
                         </div>
-                        <h4 style="color: var(--text-dark); margin-bottom: 0.5rem;">Authentic Storytelling</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">Share genuine experiences from both local and international perspectives</p>
+                        <h4>Authentic Storytelling</h4>
+                        <p>Share genuine experiences from both local and international perspectives</p>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                            <i class="fas fa-leaf" style="color: white; font-size: 1.5rem;"></i>
+                    <div class="goal-item">
+                        <div class="goal-icon" style="background: var(--coral);">
+                            <i class="fas fa-leaf"></i>
                         </div>
-                        <h4 style="color: var(--text-dark); margin-bottom: 0.5rem;">Sustainable Market Culture</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">Promote responsible market visits that support local vendors and preserve traditions</p>
+                        <h4>Sustainable Market Culture</h4>
+                        <p>Promote responsible market visits that support local vendors and preserve traditions</p>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                            <i class="fas fa-users" style="color: var(--text-dark); font-size: 1.5rem;"></i>
+                    <div class="goal-item">
+                        <div class="goal-icon" style="background: var(--gold);">
+                            <i class="fas fa-users" style="color: var(--text-primary);"></i>
                         </div>
-                        <h4 style="color: var(--text-dark); margin-bottom: 0.5rem;">Culinary Exchange</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">Foster understanding between Thai and international food cultures through market experiences</p>
+                        <h4>Culinary Exchange</h4>
+                        <p>Foster understanding between Thai and international food cultures through market experiences</p>
                     </div>
                 </div>
             </div>
@@ -137,50 +128,49 @@
     </section>
 
     <!-- Team Section -->
-    <section style="padding: 80px 0; background: var(--white);">
+    <section class="team-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Meet Our Team</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div class="section-header">
+                <span class="section-label">Our People</span>
+                <h2 class="section-title">Meet Our Team</h2>
+            </div>
+
+            <div class="team-grid">
                 <!-- NUS Team -->
-                <div style="text-align: center;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">NUS College Team</h3>
-                    <div style="display: grid; gap: 1.5rem;">
-                        <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 15px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #003d7a, #0066cc); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                <i class="fas fa-user" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h4 style="color: var(--text-dark);">Market Research Coordinators</h4>
-                            <p style="color: var(--text-light); font-size: 0.9rem;">Leading cross-cultural market studies and digital documentation</p>
+                <div class="team-column">
+                    <h3>NUS College Team</h3>
+                    <div class="team-card">
+                        <div class="team-card-icon" style="background: linear-gradient(135deg, #003d7a, #0066cc);">
+                            <i class="fas fa-user"></i>
                         </div>
-                        <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 15px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #003d7a, #0066cc); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                <i class="fas fa-camera" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h4 style="color: var(--text-dark);">Culinary Storytellers</h4>
-                            <p style="color: var(--text-light); font-size: 0.9rem;">Documenting market experiences through photography and food stories</p>
+                        <h4>Market Research Coordinators</h4>
+                        <p>Leading cross-cultural market studies and digital documentation</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-icon" style="background: linear-gradient(135deg, #003d7a, #0066cc);">
+                            <i class="fas fa-camera"></i>
                         </div>
+                        <h4>Culinary Storytellers</h4>
+                        <p>Documenting market experiences through photography and food stories</p>
                     </div>
                 </div>
 
                 <!-- Burapha Team -->
-                <div style="text-align: center;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Burapha University Team</h3>
-                    <div style="display: grid; gap: 1.5rem;">
-                        <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 15px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), #228B22); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                <i class="fas fa-map-marked-alt" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h4 style="color: var(--text-dark);">Market Guides</h4>
-                            <p style="color: var(--text-light); font-size: 0.9rem;">Sharing authentic vendor knowledge and hidden market specialties</p>
+                <div class="team-column">
+                    <h3>Burapha University Team</h3>
+                    <div class="team-card">
+                        <div class="team-card-icon" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
+                            <i class="fas fa-map-marked-alt"></i>
                         </div>
-                        <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 15px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), #228B22); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                                <i class="fas fa-language" style="color: white; font-size: 1.5rem;"></i>
-                            </div>
-                            <h4 style="color: var(--text-dark);">Culinary Ambassadors</h4>
-                            <p style="color: var(--text-light); font-size: 0.9rem;">Bridging language barriers and facilitating food cultural understanding</p>
+                        <h4>Market Guides</h4>
+                        <p>Sharing authentic vendor knowledge and hidden market specialties</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-icon" style="background: linear-gradient(135deg, var(--jungle), var(--sea-green));">
+                            <i class="fas fa-language"></i>
                         </div>
+                        <h4>Culinary Ambassadors</h4>
+                        <p>Bridging language barriers and facilitating food cultural understanding</p>
                     </div>
                 </div>
             </div>
@@ -188,42 +178,45 @@
     </section>
 
     <!-- Impact Section -->
-    <section style="padding: 80px 0; background: var(--light-gray);">
+    <section class="impact-section">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 3rem;">Our Impact</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-                <div>
-                    <div style="font-size: 3rem; color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem;">50+</div>
-                    <p style="color: var(--text-light); font-weight: 500;">Stories Collected</p>
+            <div class="section-header">
+                <span class="section-label">By the Numbers</span>
+                <h2 class="section-title">Our Impact</h2>
+            </div>
+
+            <div class="stats-grid stagger-children">
+                <div class="stat-item">
+                    <div class="stat-number" style="color: var(--jungle);">50+</div>
+                    <p class="stat-label">Stories Collected</p>
                 </div>
-                <div>
-                    <div style="font-size: 3rem; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">2</div>
-                    <p style="color: var(--text-light); font-weight: 500;">Universities United</p>
+                <div class="stat-item">
+                    <div class="stat-number" style="color: var(--coral);">2</div>
+                    <p class="stat-label">Universities United</p>
                 </div>
-                <div>
-                    <div style="font-size: 3rem; color: var(--secondary-color); font-weight: 700; margin-bottom: 0.5rem;">100+</div>
-                    <p style="color: var(--text-light); font-weight: 500;">Students Involved</p>
+                <div class="stat-item">
+                    <div class="stat-number" style="color: var(--gold);">100+</div>
+                    <p class="stat-label">Students Involved</p>
                 </div>
-                <div>
-                    <div style="font-size: 3rem; color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem;">∞</div>
-                    <p style="color: var(--text-light); font-weight: 500;">Memories Created</p>
+                <div class="stat-item">
+                    <div class="stat-number" style="color: var(--jungle);">&infin;</div>
+                    <p class="stat-label">Memories Created</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Future Vision -->
-    <section style="padding: 80px 0; background: var(--white);">
+    <section class="vision-section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">Looking Forward</h2>
-                <p style="font-size: 1.2rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem;">
+            <div class="vision-content">
+                <h2>Looking Forward</h2>
+                <p>
                     This project is just the beginning. We envision expanding our collaboration to include more universities, more traditional markets, and more opportunities for culinary cultural exchange. Together, we're building bridges that will connect future generations of students and food enthusiasts.
                 </p>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <div class="vision-buttons">
                     <a href="stories.html" class="btn btn-primary">Read Our Stories</a>
-                    <a href="contact.html" class="btn btn-secondary">Join Our Mission</a>
+                    <a href="contact.html" class="btn btn-secondary" style="color: var(--jungle); border-color: var(--jungle);">Join Our Mission</a>
                 </div>
             </div>
         </div>

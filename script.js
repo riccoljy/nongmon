@@ -56,49 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            navbar.style.background = 'rgba(250, 246, 240, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            navbar.style.background = 'rgba(250, 246, 240, 0.85)';
+            navbar.style.boxShadow = 'none';
         }
     });
 
-    // Contact form handling (for contact page)
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simple form validation
-            if (!data.name || !data.email || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // Show success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.innerHTML = `
-                <i class="fas fa-check-circle"></i>
-                <p>Thank you for your message! We'll get back to you soon.</p>
-            `;
-            
-            this.parentNode.insertBefore(successMessage, this.nextSibling);
-            this.reset();
-
-            // Remove success message after 5 seconds
-            setTimeout(() => {
-                if (successMessage.parentNode) {
-                    successMessage.parentNode.removeChild(successMessage);
-                }
-            }, 5000);
-        });
-    }
 });
 
 // Utility function for smooth animations
