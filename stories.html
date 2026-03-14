@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .instagram-grid {
-            columns: 3;
-            column-gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            align-items: center;
         }
 
         .ig-card {
-            break-inside: avoid;
-            margin-bottom: 2rem;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -47,13 +47,13 @@
 
         @media (max-width: 1024px) {
             .instagram-grid {
-                columns: 2;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 640px) {
             .instagram-grid {
-                columns: 1;
+                grid-template-columns: 1fr;
             }
         }
     </style>
