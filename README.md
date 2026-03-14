@@ -22,14 +22,8 @@ This website showcases the culinary heritage and cultural richness of Nong Mon M
 ### 📖 Stories Page (`stories.html`)
 - Interactive story dashboard with filtering by categories
 - Student market experiences from both universities
-- Clickable image modals for enhanced viewing
+- Each story links to Instagram posts from @nongmoninmyeyes
 - Tags and author information for each story
-
-### 🛒 Market Guide Page (`attractions.html`)
-- Comprehensive guide to Nong Mon Market's sections and specialties
-- Detailed information about seafood, desserts, and local vendors
-- Market activity recommendations and best times to visit
-- Beautiful card layouts with gradient backgrounds
 
 ### 👥 About Us Page (`about.html`)
 - Detailed partnership information
@@ -74,7 +68,6 @@ This website showcases the culinary heritage and cultural richness of Nong Mon M
 nong-mon-market/
 ├── index.html          # Homepage
 ├── stories.html        # Stories dashboard
-├── attractions.html    # Market guide
 ├── about.html         # About us/partnership
 ├── contact.html       # Contact & visit info
 ├── styles.css         # Main stylesheet
@@ -122,7 +115,7 @@ The website is fully responsive with:
 
 ### Stories Page
 - **Category Filtering**: Filter stories by culture, food, nature, adventure
-- **Image Modals**: Click story images to view in full-screen modal
+- **Instagram Links**: Each story card links to @nongmoninmyeyes on Instagram
 - **Smooth Animations**: Stories animate in as you scroll
 
 ### Navigation
